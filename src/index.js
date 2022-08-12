@@ -1,4 +1,12 @@
 module.exports = function reverse (n) {
-    let r = n.toString().split('').reverse().join('');
-  return Math.sign(n) * parseInt(r);
+  let str = String(n),
+      strNew = '',
+      rez = 0;
+
+  str = str.replace(/\-/g, '');
+
+  for(let i = str.length-1; i >= 0; i--) {
+      strNew = strNew.concat(str[i]);
+  } 
+  return rez = Number(strNew);
 }
